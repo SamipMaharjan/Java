@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class freestyle {
+       public static void main(String[] args){
+       Scanner scan = new Scanner(System.in);
+       int length = 0;
+           System.out.println("Enter the amount of numbers you want to input in your array:");
+           length = scan.nextInt();
+           int[] array = new int[length];
+           System.out.println(length);
+           for(int i = 0; i < length; i++)
+           {
+               System.out.println("Enter your"+(i+1)+"th number:");
+               array[i] = scan.nextInt();
+           }
+           int j = 0;
+           for(int i = 0; i < (length/2); i++)
+           {
+               int space;
+               space = array[i];
+               array[i]=array[(array.length-1)-j];
+               array[(array.length-1)-j]=space;
+               j++;
+           }
+           for(int e : array)
+               System.out.println(e);
+       }
+}

@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class freestyle {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+         int x;
+        int[] array = new int[10];
+        int sum = 0;
+        System.out.println("Enter 10 integers you want sum of:");
+        for (int i = 0; i <= 9; i++)
+        {
+            System.out.println("Enter " + (i + 1) + "th number:");
+            array[i] = scan.nextInt();
+            sum = sum + array[i];
+        }
+        System.out.println(sum+"is the sum of all the numbers you entered");
