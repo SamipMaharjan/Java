@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class freestyle{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Type your string");
+        String sentence = scan.nextLine();
+        char[] characterArray = sentence.toCharArray();
+        int numbers = 0;
+        int letter = 0;
+        int blank = 0;
+        int others = 0;
+
+        for(int i = 0; i < sentence.length() ;i++)
+        {
+            if(Character.isDigit(characterArray[i]))
+                numbers++;
+            else if(Character.isAlphabetic(characterArray[i]))
+                letter++;
+            else if(Character.isSpaceChar(characterArray[i]))
+                blank++;
+            else
+                others++;
+        }
+        System.out.println("There are "+numbers+" numbers.");
+        System.out.println("There are "+letter+" letters.");
+        System.out.println("There are "+blank+" spaces.");
+        System.out.println("There are "+others+" other strings.");
+
+
+
+
+
+    }
+}
