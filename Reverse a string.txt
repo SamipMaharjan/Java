@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class maybey {
+        public static void main(String[] args)
+        {
+            Scanner scan = new Scanner(System.in);
+            System.out.println("Enter your sentence:");
+            String string = scan.nextLine();
+            char[] array = string.toCharArray();
+            int j = 0;
+            for(int i = 0; i< (array.length/2); i++)
+            {
+                char space = array[i];
+                array[i] = array[(array.length-1)-j];
+                array[(array.length-1)-j] = space;
+                j++;
+            }
+
+            for(int i = 0; i< array.length; i++)
+                System.out.print(array[i]);
+        }
+    }
